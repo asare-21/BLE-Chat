@@ -11,16 +11,13 @@ import 'package:whatsapp_clone/shared/utils/storage_paths.dart';
 import 'features/auth/views/welcome.dart';
 
 import 'features/home/views/base.dart';
-import 'firebase_options.dart';
 
 import 'package:whatsapp_clone/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
 
   await SharedPref.init();
   await IsarDb.init();
